@@ -11,3 +11,5 @@ const publicRoutes = [
     element: <Register/>
   }
 ]
+
+export default publicRoutes;
