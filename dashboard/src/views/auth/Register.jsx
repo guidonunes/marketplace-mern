@@ -10,7 +10,7 @@ const Register = () => {
           <form>
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" placeholder='name' className='p-2 rounded-md bg-[#ffffff]' required />
+              <input type="text" id="name" name="name" placeholder='Enter your name' className='p-2 rounded-md bg-[#ffffff]' required />
             </div>
           </form>
         </div>
