@@ -11,17 +11,17 @@ const Register = () => {
             {/* Add name field */}
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" placeholder='Enter your name' className='p-2 rounded-md bg-[#ffffff]' required />
+              <input type="text" id="name" name="name" placeholder='Enter your name' className='p-2 rounded-md bg-[#ffffff] text-black' required />
             </div>
             {/* Add email field */}
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="email">Email</label>
-              <input type="text" id="email" name="email" placeholder='Enter your Email' className='p-2 rounded-md bg-[#ffffff]' required />
+              <input type="text" id="email" name="email" placeholder='Enter your Email' className='p-2 rounded-md bg-[#ffffff] text-black' required />
             </div>
             {/* Add password field */}
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="name">Password</label>
-              <input type="text" id="password" name="password" placeholder='Password' className='p-2 rounded-md bg-[#ffffff]' required />
+              <input type="password" id="password" name="password" placeholder='Password' className='p-2 rounded-md bg-[#ffffff] text-black' required />
             </div>
           </form>
         </div>
