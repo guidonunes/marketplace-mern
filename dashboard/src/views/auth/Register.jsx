@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   return (
@@ -29,6 +30,10 @@ const Register = () => {
               <label htmlFor="checkbox" className='text-sm'>I agree to the terms and conditions</label>
             </div>
             <button className='bg-slate-800 w-full hover:shadow-blue-300/ hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>Sign up</button>
+            {/* Add link to login page */}
+            <div className='flex item-center mb-3 gap-3 justify-center'>
+              <p>Already have an account? <Link className='font-bold' to="/login">Sign In</Link></p>
+            </div>
           </form>
         </div>
       </div>
