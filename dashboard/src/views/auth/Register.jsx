@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGoogle, FaFacebookF } from "react-icons/fa";
+import { FaGoogle, FaFacebook } from "react-icons/fa";
 
 const Register = () => {
   return (
@@ -47,7 +47,7 @@ const Register = () => {
                 <span><FaGoogle /></span>
               </div>
               <div className="w-[135px] h-[35px] flex rounded-md bg-blue-700 shadow-lg hover:shadow-blue-700/50 justify-center cursor-pointer items-center overflow-hidden">
-                <span><FaFacebookF /></span>
+                <span><FaFacebook /></span>
               </div>
             </div>
           </form>
