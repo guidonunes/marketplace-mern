@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 
 const Register = () => {
+
+  const [name, setName] = useState({
+    name: '',
+    email: '',
+    password: ''
+  });
+
+  const handleChange = (e) => {
+    setName({
+      ...name,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    console.log(name);
+  };
+
   return (
     <div className='min-w-screen min-h-screen bg-[#cdcae9] flex justify-center items-center'>
       <div className="w-[350px] text-[#ffffff] p-2">
@@ -15,19 +34,19 @@ const Register = () => {
             {/* Add name field */}
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" placeholder='Enter your name' className='p-2 rounded-md bg-[#ffffff] text-black' required />
+              <input onChange={handleChange} value={name.name} type="text" id="name" name="name" placeholder='Enter your name' className='p-2 rounded-md bg-[#ffffff] text-black' required />
             </div>
 
             {/* Add email field */}
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="email">Email</label>
-              <input type="text" id="email" name="email" placeholder='Enter your Email' className='p-2 rounded-md bg-[#ffffff] text-black' required />
+              <input  onChange={handleChange} value={name.email} type="text" id="email" name="email" placeholder='Enter your Email' className='p-2 rounded-md bg-[#ffffff] text-black' required />
             </div>
 
             {/* Add password field */}
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="name">Password</label>
-              <input type="password" id="password" name="password" placeholder='Password' className='p-2 rounded-md bg-[#ffffff] text-black' required />
+              <input  onChange={handleChange} value={name.password} type="password" id="password" name="password" placeholder='Password' className='p-2 rounded-md bg-[#ffffff] text-black' required />
             </div>
 
             {/* Add confirm password field */}
