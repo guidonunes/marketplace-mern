@@ -1,8 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 
 const Login = () => {
+
+  const [email, setEmail] = useState({
+    email: '',
+    password: ''
+  });
+
+  const handleChange = (e) => {
+    setEmail({
+      ...email,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    console.log(email);
+  };
+
+
   return (
     <div className='min-w-screen min-h-screen bg-[#cdcae9] flex justify-center items-center'>
       <div className="w-[350px] text-[#ffffff] p-2">
@@ -10,18 +29,18 @@ const Login = () => {
           <h2 className='text-x1 mb-3 font-bold'>Welcome to the E-Commerce Page </h2>
           <p className='text-sm mb-3 font-medium'>Please, enter your email and password : </p>
 
-          <form>
+          <form onSubmit={submitForm}>
 
             {/* Add email field */}
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="email">Email</label>
-              <input type="text" id="email" name="email" placeholder='Enter your Email' className='p-2 rounded-md bg-[#ffffff] text-black' required />
+              <input onChange={handleChange} value={email.email} type="text" id="email" name="email" placeholder='Enter your Email' className='p-2 rounded-md bg-[#ffffff] text-black' required />
             </div>
 
             {/* Add password field */}
             <div className="flex flex-col w-full gap-1 mb-3">
               <label htmlFor="name">Password</label>
-              <input type="password" id="password" name="password" placeholder='Password' className='p-2 rounded-md bg-[#ffffff] text-black' required />
+              <input onChange={handleChange} value={email.password} type="password" id="password" name="password" placeholder='Password' className='p-2 rounded-md bg-[#ffffff] text-black' required />
             </div>
 
             {/* Add confirm password field */}
