@@ -29,7 +29,7 @@ const Register = () => {
           <h2 className='text-x1 mb-3 font-bold'>Welcome to the E-Commerce Page </h2>
           <p className='text-sm mb-3 font-medium'>Please, register your account : </p>
 
-          <form>
+          <form onSubmit={submitForm}>
 
             {/* Add name field */}
             <div className="flex flex-col w-full gap-1 mb-3">
