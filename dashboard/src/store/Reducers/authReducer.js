@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 
-expect const authReducer = createSlice({
+export const authReducer = createSlice({
   name: "auth",
   initialState: {
     successMessage: "",
@@ -14,7 +14,7 @@ expect const authReducer = createSlice({
   reducers: {
 
   },
-  extraReducers: {
+  extraReducers: () => {
 
   }
 
