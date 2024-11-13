@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store/index';
+import { Toaster } from 'react-hot-toast';
 
 import { BrowserRouter } from 'react-router-dom';
 
@@ -15,6 +16,15 @@ root.render(
     <Provider store={store}>
       <Suspense fallback={<div>Loading...</div>}>
         <App />
+        <Toaster
+          toastOptions={{
+            position: 'top-right',
+            style: {
+              background: '#283046',
+              color: '#fff',
+             },
+          }}
+        />
       </Suspense>
     </Provider>
   </BrowserRouter>
