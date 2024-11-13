@@ -1,8 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import api from "../../api";
 
 
 export const authAction = createAsyncThunk(
   'auth/authAction',
+  async(info) => {
+    console.log(info);
+    try {
+      // const {data} = await api.post('/admin-login', info, {withCredentials: true});
+      // console.log(data);
+    } catch (error) {
+
+    }
+  }
 )
 
 
