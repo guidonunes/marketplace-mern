@@ -1,3 +1,6 @@
+const authControllers = require('../controllers/authControllers');
+
+
 const router = require('express').Router();
 
-router.post('/admin-login')
+router.post('/admin-login', authControllers)
