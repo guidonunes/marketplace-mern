@@ -1,4 +1,5 @@
 const adminModel = require('../models/adminModel');
+const { responseReturn } = require('../utils/response');
 
 class authControllers {
   admin_login = async(req, res) => {
@@ -13,7 +14,7 @@ class authControllers {
       }
 
     } catch (error) {
-
+      responseReturn(res, 500, 'Internal server error',)
     }
   }
 }
