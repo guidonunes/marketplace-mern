@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
-import { authAction } from '../../store/Reducers/authReducer';
+import { admin_login } from '../../store/Reducers/authReducer';
 
 
 
@@ -22,7 +22,7 @@ const AdminLogin = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    dispatch(authAction(email));
+    dispatch(admin_login(email));
     // console.log(email);
   };
 
