@@ -23,3 +23,6 @@ const adminSchema = new Schema({
     default: 'admin'
   }
 })
+
+
+module.exports = model('admins', adminSchema);
