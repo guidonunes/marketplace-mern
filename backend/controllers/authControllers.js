@@ -10,7 +10,7 @@ class authControllers {
       if (admin) {
 
       } else {
-
+        responseReturn(res, 400, 'Invalid email or password')
       }
 
     } catch (error) {
