@@ -1,5 +1,6 @@
 const adminModel = require('../models/adminModel');
 const { responseReturn } = require('../utils/response');
+const bcrypt = require('bcrypt');
 
 class authControllers {
   admin_login = async(req, res) => {
@@ -8,7 +9,8 @@ class authControllers {
       const admin = await adminModel.findOne({email}).select('+password');
       // console.log(admin);
       if (admin) {
-
+        const isMatch = await bcrypt.compare(password, admin.password)
+        console.log(isMatch);
       } else {
         responseReturn(res, 404, 'Invalid email or password')
       }
