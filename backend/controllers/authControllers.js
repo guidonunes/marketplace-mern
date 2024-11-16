@@ -10,7 +10,15 @@ class authControllers {
       // console.log(admin);
       if (admin) {
         const isMatch = await bcrypt.compare(password, admin.password)
-        console.log(isMatch);
+        // console.log(isMatch);
+        if (isMatch) {
+          const token  = await createToken({
+            id: admin._id,
+            role: admin.role
+          })
+        } else {
+          responseReturn(res, 404, 'Invalid email or password')
+        }
       } else {
         responseReturn(res, 404, 'Invalid email or password')
       }
