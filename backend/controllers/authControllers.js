@@ -17,6 +17,9 @@ class authControllers {
             id: admin._id,
             role: admin.role
           })
+          res.cookie('accessToken', token {
+            expire: new Date(Date.now() + 7*24*60*60*1000),
+          })
         } else {
           responseReturn(res, 404, 'Invalid email or password')
         }
