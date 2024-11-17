@@ -14,7 +14,7 @@ class authControllers {
         // console.log(isMatch);
         if (isMatch) {
           const token  = await createToken({
-            id: admin._id,
+            id: admin.id,
             role: admin.role
           })
           res.cookie('accessToken', token,{
