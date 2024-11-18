@@ -35,7 +35,10 @@ export const authReducer = createSlice({
     builder
     .addCase(admin_login.pending, (state, {payload})=>{
       state.loader = true;
-
+    })
+    .addCase(admin_login.rejected, (state, {payload})=>{
+      state.loader = false;
+      state.errorMessage = payload.error;
     })
   }
 
