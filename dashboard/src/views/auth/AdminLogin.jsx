@@ -57,7 +57,6 @@ const AdminLogin = () => {
             {
               loader ? <PropagateLoader /> : 'Login'
             }
-              Login
             </button>
 
 
