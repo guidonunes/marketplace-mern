@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import { admin_login } from '../../store/Reducers/authReducer';
 import { PropagateLoader } from 'react-spinners';
 
@@ -8,6 +8,7 @@ import { PropagateLoader } from 'react-spinners';
 const AdminLogin = () => {
 
   const dispatch = useDispatch();
+  const {loader} = useSelector(state => state.auth);
 
   const [email, setEmail] = useState({
     email: '',
@@ -52,7 +53,12 @@ const AdminLogin = () => {
             </div>
 
             {/* Add confirm password field */}
-            <button className='bg-slate-800 w-full hover:shadow-blue-300/ hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>Login</button>
+            <button disabled={loader ? true : false} className='bg-slate-800 w-full hover:shadow-blue-300/ hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>
+            {
+              loader ? <PropagateLoader /> : 'Login'
+            }
+              Login
+            </button>
 
 
           </form>
