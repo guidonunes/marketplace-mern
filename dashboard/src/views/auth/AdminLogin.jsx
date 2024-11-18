@@ -28,6 +28,14 @@ const AdminLogin = () => {
     // console.log(email);
   };
 
+  const overrideStyle = {
+    display: 'flex',
+    margin: '0 auto',
+    height: '24px',
+    justifyContent: 'center',
+    alignItem: 'center',
+  }
+
 
   return (
     <div className='min-w-screen min-h-screen bg-[#cdcae9] flex justify-center items-center'>
@@ -55,7 +63,7 @@ const AdminLogin = () => {
             {/* Add confirm password field */}
             <button disabled={loader ? true : false} className='bg-slate-800 w-full hover:shadow-blue-300/ hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>
             {
-              loader ? <PropagateLoader /> : 'Login'
+              loader ? <PropagateLoader color='#fff' cssOverride={overrideStyle} /> : 'Login'
             }
             </button>
 
