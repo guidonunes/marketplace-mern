@@ -20,12 +20,12 @@ class authControllers {
           res.cookie('accessToken', token,{
             expire: new Date(Date.now() + 7*24*60*60*1000),
           })
-          responseReturn(res, 200, 'Login success', {token})
+          responseReturn(res, 200, {token, message:'Login success'})
         } else {
-          responseReturn(res, 404, 'Invalid email or password')
+          responseReturn(res, 404, {error: 'Invalid email or password'})
         }
       } else {
-        responseReturn(res, 404, 'Invalid email or password')
+        responseReturn(res, 404, {error: 'Invalid email or password'})
       }
 
     } catch (error) {
