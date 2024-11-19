@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
-import { admin_login } from '../../store/Reducers/authReducer';
+import { admin_login, messageClear } from '../../store/Reducers/authReducer';
 import { PropagateLoader } from 'react-spinners';
 import toast from 'react-hot-toast';
 
@@ -40,6 +40,7 @@ const AdminLogin = () => {
   useEffect(() => {
     if (errorMessage) {
       toast.error(errorMessage);
+      dispatch(messageClear());
     }
   })
 
