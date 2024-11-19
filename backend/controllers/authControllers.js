@@ -13,14 +13,14 @@ class authControllers {
         const isMatch = await bcrypt.compare(password, admin.password)
         // console.log(isMatch);
         if (isMatch) {
-          const token  = await createToken({
+          const token  = createToken({
             id: admin.id,
             role: admin.role
           })
           res.cookie('accessToken', token,{
             expire: new Date(Date.now() + 7*24*60*60*1000),
           })
-          responseReturn(res, 200, {token, message:'Login success'})
+          responseReturn(res, 200, {token}, {message:'Login success'})
         } else {
           responseReturn(res, 404, {error: 'Invalid email or password'})
         }
@@ -29,7 +29,7 @@ class authControllers {
       }
 
     } catch (error) {
-      responseReturn(res, 500, 'Internal server error',)
+      responseReturn(res, 500, {error: 'Internal server error'})
 
     }
   }
