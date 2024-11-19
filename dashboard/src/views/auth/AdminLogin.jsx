@@ -9,7 +9,7 @@ import toast from 'react-hot-toast';
 const AdminLogin = () => {
 
   const dispatch = useDispatch();
-  const {loader, errorMessage} = useSelector(state => state.auth);
+  const {loader, errorMessage, successMessage} = useSelector(state => state.auth);
 
   const [email, setEmail] = useState({
     email: '',
@@ -42,7 +42,11 @@ const AdminLogin = () => {
       toast.error(errorMessage);
       dispatch(messageClear());
     }
-  }, [errorMessage, dispatch])
+    if (successMessage) {
+      toast.success(successMessage);
+      dispatch(messageClear());
+    }
+  }, [errorMessage, successMessage, dispatch])
 
 
   return (
