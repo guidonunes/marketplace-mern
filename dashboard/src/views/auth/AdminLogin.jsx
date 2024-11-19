@@ -49,7 +49,7 @@ const AdminLogin = () => {
       dispatch(messageClear());
       navigate('/');
     }
-  }, [errorMessage, successMessage, dispatch])
+  }, [errorMessage, successMessage, navigate, dispatch])
 
 
   return (
