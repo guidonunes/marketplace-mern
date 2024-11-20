@@ -33,6 +33,22 @@ class authControllers {
 
     }
   }
+
+  // Add the correct path for the route
+  getUser = async(req, res) => {
+    const { id, role } = req;
+    try {
+      if (roll === 'admin') {
+        const user = await adminModel.findById(id);
+        responseReturn(res, 200, {userInfor: user})
+      } else {
+        console.log('Seller info')
+      }
+    } catch (error) {
+      responseReturn(error.message)
+    }
+
+  }
 }
 
 
