@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import AdminDashboard from '../../views/admin/AdminDashboard';
-const Home = lazy(() => import('../../pages/admin/Home'));
+const AdminDashboard = lazy(() => import('../../views/admin/AdminDashboard'));
 
 
 
