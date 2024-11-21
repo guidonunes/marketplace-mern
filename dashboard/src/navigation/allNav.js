@@ -1,10 +1,10 @@
-import { AiOutlineDashBoard } from 'react-icons/ai';
+import { AiOutlineDashboard } from "react-icons/ai";
 
 export const allNav = [
   {
     id: 1,
     title: 'Dashboard',
-    icon: <AiOutlineDashBoard/>,
+    icon: <AiOutlineDashboard />,
     role: 'admin',
     path: '/admin/dashboard'
   }
