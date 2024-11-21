@@ -8,7 +8,7 @@ const MainLayout = () => {
     <div className = 'bg-[#cdcae9] w-full min-h-screen'>
       <Header />
       <Sidebar />
-      <div>
+      <div className='ml-0 lg:ml-[260px] pt-[95px] transition-all'>
         <Outlet />
       </div>
     </div>
