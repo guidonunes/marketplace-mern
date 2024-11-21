@@ -7,5 +7,12 @@ export const allNav = [
     icon: <AiOutlineDashboard />,
     role: 'admin',
     path: '/admin/dashboard'
+  },
+  {
+    id: 1,
+    title: 'Dashboard',
+    icon: <AiOutlineDashboard />,
+    role: 'seller',
+    path: '/admin/dashboard'
   }
 ]
