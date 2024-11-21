@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className = 'bg-[#cdcae9] w-full min-h-screen'>
       <Header />
       <Sidebar />
       <div>
