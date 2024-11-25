@@ -26,7 +26,7 @@ const Sidebar = () => {
            <ul>
             {
               allNav.map((n, i) => <li key={i}>
-                <Link to={n.path} className={`${pathname === n.path ? 'bg-blue-600 shadow-indigo-500/50 text-white duration-500' : ''}`}>
+                <Link to={n.path} className={`${pathname === n.path ? 'bg-blue-600 shadow-indigo-500/50 text-white duration-500' : 'text-[#030811] font-bold duration-200'} px-[12px] py-[9px] rounded-sm flex justify-center`}>
                   <span>{n.icon}</span>
                   <span>{n.title}</span>
                 </Link>
