@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { getNav } from '../navigation/index';
 
 const Sidebar = () => {
+
+  const {pathname} = useLocation();
 
   const [allNav, setAllNav] = useState([])
   useEffect(() => {
@@ -24,8 +26,10 @@ const Sidebar = () => {
            <ul>
             {
               allNav.map((n, i) => <li key={i}>
-                <span>{n.icon}</span>
-                <span>{n.title}</span>
+                <Link to={n.path} className={`${pathname === n.path ? 'bg-blue-600 shadow-indigo-500/50 text-white duration-500' : ''}`}>
+                  <span>{n.icon}</span>
+                  <span>{n.title}</span>
+                </Link>
               </li>)
             }
            </ul>
