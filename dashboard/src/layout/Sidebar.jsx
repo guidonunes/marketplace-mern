@@ -9,7 +9,7 @@ const Sidebar = () => {
     const navs = getNav('admin');
     setAllNav(navs);
   }, [])
-  console.log(allNav);
+  // console.log(allNav);
 
   return (
     <div>
@@ -21,7 +21,14 @@ const Sidebar = () => {
           </Link>
         </div>
         <div className="px-[16px]">
-
+           <ul>
+            {
+              allNav.map((n, i) => <li key={i}>
+                <span>{n.icon}</span>
+                <span>{n.title}</span>
+              </li>)
+            }
+           </ul>
         </div>
       </div>
     </div>
