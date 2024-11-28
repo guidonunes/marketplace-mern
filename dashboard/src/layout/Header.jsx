@@ -15,8 +15,8 @@ const Header = ({showSidebar, setShowSidebar}) => {
           <div className='flex justify-center items-center'>
             <div className='flex justify-center items-center gap-3'>
               <div className='flex justify-center items-center flex-col text-end'>
-                <h2>Doug The Boss</h2>
-                <span>Admin</span>
+                <h2 className='text-md font-bold'>Doug The Boss</h2>
+                <span className='text-[14px] w-full font-normal'>Admin</span>
               </div>
             </div>
           </div>
