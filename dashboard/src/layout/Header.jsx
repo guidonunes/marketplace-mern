@@ -8,6 +8,9 @@ const Header = ({showSidebar, setShowSidebar}) => {
         <div  onClick={() => {setShowSidebar(!showSidebar)}} className='w-[35px] flex lg:hidden h-[35px] rounded-sm bg-indigo-500 shadow-lg hover:shadow-indigo-500/50 justify-center items-center cursor-pointer '>
           <span><FaList/></span>
         </div>
+        <div className='hidden md:block '>
+          <input className='px-3 py-2 outline-none border border-slate-700 rounded-md focus:border-indigo-500 overflow-hidden' type="text" name='search' placeholder='search' />
+        </div>
       </div>
     </div>
   );
