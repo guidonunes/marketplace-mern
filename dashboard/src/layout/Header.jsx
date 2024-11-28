@@ -9,7 +9,18 @@ const Header = ({showSidebar, setShowSidebar}) => {
           <span><FaList/></span>
         </div>
         <div className='hidden md:block '>
-          <input className='px-3 py-2 outline-none border border-slate-700 rounded-md focus:border-indigo-500 overflow-hidden' type="text" name='search' placeholder='search' />
+          <input className='px-3 py-2 outline-none border border-slate-700 rounded-md focus:border-indigo-300 overflow-hidden' type="text" name='search' placeholder='Search' />
+        </div>
+        <div className='flex justify-center items-center gap-8 relative'>
+          <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center gap-3'>
+              <div className='flex justify-center items-center flex-col text-end'>
+                <h2>Doug The Boss</h2>
+                <span>Admin</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
