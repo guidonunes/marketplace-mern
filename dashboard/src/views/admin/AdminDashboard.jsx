@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdCurrencyExchange } from "react-icons/md";
 
 const AdminDashboard = () => {
   return (
@@ -10,7 +11,7 @@ const AdminDashboard = () => {
             <span className='text-md font-medium'>Total Sales</span>
           </div>
           <div className='w-[40px] h-[48px] rounded-full bg-[#fa0305] flex justify-center items-center text-xl'>
-
+            <MdCurrencyExchange className='text-[#fae8e8] shadow-lg' />
           </div>
         </div>
       </div>
