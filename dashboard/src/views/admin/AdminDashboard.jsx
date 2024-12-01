@@ -9,6 +9,9 @@ const AdminDashboard = () => {
             <h2 className='text-3xl font-bold'>$3434</h2>
             <span className='text-md font-medium'>Total Sales</span>
           </div>
+          <div className='w-[40px] h-[48px] rounded-full bg-[#fa0305] flex justify-center items-center text-xl'>
+
+          </div>
         </div>
       </div>
 
