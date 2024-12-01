@@ -2,6 +2,7 @@ import React from 'react';
 import { MdCurrencyExchange } from "react-icons/md";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const AdminDashboard = () => {
   return (
@@ -38,13 +39,13 @@ const AdminDashboard = () => {
           </div>
         </div>
 
-        <div className='flex justify-between items-center p-5 bg-[#fae8e8] rounded-md gap-3'>
+        <div className='flex justify-between items-center p-5 bg-[#ecebff] rounded-md gap-3'>
           <div className='flex flex-col justify-start items-start text-[#5c5a5a]'>
-            <h2 className='text-3xl font-bold'>$3434</h2>
-            <span className='text-md font-medium'>Total Sales</span>
+            <h2 className='text-3xl font-bold'>264</h2>
+            <span className='text-md font-medium'>Total Orders</span>
           </div>
-          <div className='w-[40px] h-[48px] rounded-full bg-[#fa0305] flex justify-center items-center text-xl'>
-            <MdCurrencyExchange className='text-[#fae8e8] shadow-lg' />
+          <div className='w-[40px] h-[48px] rounded-full bg-[#0200f8] flex justify-center items-center text-xl'>
+            <MdOutlineShoppingCart className='text-[#fae8e8] shadow-lg' />
           </div>
         </div>
 
