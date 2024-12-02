@@ -138,11 +138,14 @@ const AdminDashboard = () => {
             <div className='flex flex-col gap-2 pt-6 text-[#d0d2d6]'>
               <ol className='relative border-1 border-slate-600 ml-4 '>
                 <li>
-                  <div className=""><img src="/images/admin.jpg" alt='admin img'/></div>
+                  <div className=""><img  src="/images/admin.jpg" alt='admin img'/></div>
                   <div className='p-3 bg-slate-800 rounded-lg border border-slate-600 shadow-sm'>
                     <div className='flex justify-between items-center mb-2'>
                       <Link className='text-md font-normal text-[#d0d2d6]'>Doug The Boss</Link>
                       <time className='mb-1 text-sm font-normal sm:order-last sm:mb-0'>2 days ago</time>
+                    </div>
+                    <div className='p-2 text-xs font-norma bg-slate-700 rounded lg border border-slate-800'>
+                      How are you?
                     </div>
                   </div>
                 </li>
