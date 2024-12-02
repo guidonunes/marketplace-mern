@@ -135,6 +135,19 @@ const AdminDashboard = () => {
               <h2 className='font-semibold text-lg text-[#d0d2d6] pb-3'>Recent messages</h2>
               <Link className='font-semibold text-sm text-[#d0d2d6]'>View All</Link>
             </div>
+            <div className='flex flex-col gap-2 pt-6 text-[#d0d2d6]'>
+              <ol className='relative border-1 border-slate-600 ml-4 '>
+                <li>
+                  <div className=""><img src="/images/admin.jpg" alt='admin img'/></div>
+                  <div className='p-3 bg-slate-800 rounded-lg border border-slate-600 shadow-sm'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <Link className='font-semibold text-sm text-[#d0d2d6]'>Doug The Boss</Link>
+                      <time>2 days ago</time>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
