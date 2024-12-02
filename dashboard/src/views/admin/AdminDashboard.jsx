@@ -4,6 +4,7 @@ import { MdProductionQuantityLimits } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Chart from 'react-apexcharts'
+import { Link } from 'react-router-dom';
 
 const AdminDashboard = () => {
   const  state ={
@@ -132,6 +133,7 @@ const AdminDashboard = () => {
           <div className='w-full bg-[#6a5fdf] p-4 rounded-md text-[#d0d2d6]'>
             <div className='flex justify-between items-center'>
               <h2 className='font-semibold text-lg text-[#d0d2d6] pb-3'>Recent messages</h2>
+              <Link className='font-semibold text-sm text-[#d0d2d6]'>View All</Link>
             </div>
           </div>
         </div>
