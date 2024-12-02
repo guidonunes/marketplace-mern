@@ -51,6 +51,12 @@ const AdminDashboard = () => {
 
       </div>
 
+      <div className='w-full flex flex-wrap mt-7 '>
+        <div className='w-full lg:w-7/12 lg:pr-3'>
+          <div className='w-full bg-[#6a5fdf] p-4 rounded-md'></div>
+        </div>
+      </div>
+
     </div>
   );
 };
