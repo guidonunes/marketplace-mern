@@ -137,8 +137,8 @@ const AdminDashboard = () => {
             </div>
             <div className='flex flex-col gap-2 pt-6 text-[#d0d2d6]'>
               <ol className='relative border-1 border-slate-600 ml-4 '>
-                <li>
-                  <div className=""><img  src="/images/admin.jpg" alt='admin img'/></div>
+                <li className='mb-3 ml-6'>
+                  <div className='flex absolute -left-5 shadow-lg justify-center items-center w-10 h-10 p-[6px] bg-[#4c4fe2] rounded-full z-10'><img className='w-full rounded-full h-full shadow-lg' src="/images/admin.jpg" alt='admin img'/></div>
                   <div className='p-3 bg-slate-800 rounded-lg border border-slate-600 shadow-sm'>
                     <div className='flex justify-between items-center mb-2'>
                       <Link className='text-md font-normal text-[#d0d2d6]'>Doug The Boss</Link>
