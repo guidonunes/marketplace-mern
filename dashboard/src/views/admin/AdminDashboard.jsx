@@ -127,6 +127,14 @@ const AdminDashboard = () => {
               />
           </div>
         </div>
+
+        <div className='w-full lg:w-5/12 pl-4 mt-6 lg:mt-0'>
+          <div className='w-full bg-[#6a5fdf] p-4 rounded-md text-[#d0d2d6]'>
+            <div className='flex justify-between items-center'>
+              <h2 className='font-semibold text-lg text-[#d0d2d6] pb-3'>Recent messages</h2>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
