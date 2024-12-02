@@ -3,6 +3,7 @@ import { MdCurrencyExchange } from "react-icons/md";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import Chart from 'react-apexcharts'
 
 const AdminDashboard = () => {
   return (
@@ -53,7 +54,14 @@ const AdminDashboard = () => {
 
       <div className='w-full flex flex-wrap mt-7 '>
         <div className='w-full lg:w-7/12 lg:pr-3'>
-          <div className='w-full bg-[#6a5fdf] p-4 rounded-md'></div>
+          <div className='w-full bg-[#6a5fdf] p-4 rounded-md'>
+            <Chart
+              options={state.options}
+              series={state.series}
+              type="bar"
+              height={350}
+              />
+          </div>
         </div>
       </div>
 
