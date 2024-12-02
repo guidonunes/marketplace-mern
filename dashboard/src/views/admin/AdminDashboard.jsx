@@ -6,6 +6,52 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import Chart from 'react-apexcharts'
 
 const AdminDashboard = () => {
+  const  state ={
+    series: [
+      {
+      name: 'Orders',
+      data: [30, 40, 45, 50, 49, 60, 70, 91, 125]
+      },
+      {
+      name: 'Revenue',
+      data: [10, 20, 25, 30, 29, 40, 50, 71, 105]
+      },
+      {
+      name: 'Sellers',
+      data: [28, 38, 43, 48, 47, 58, 68, 89, 123]
+      },
+    ],
+    options: {
+      color: ['#6a5fdf', '#fa0305', '#038000'],
+      plotOptions: {
+        radius: 30
+      },
+      chart: {
+        background: 'transparent',
+        foreColor: '#d0d2d6'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      strock: {
+        show: true,
+        curve: ['smooth', 'straight', 'stepline'],
+        lineCap: 'butt',
+        colors: '#f0f0f0',
+        width: .5,
+        dashArray: 0
+      },
+      xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      },
+      legend: {
+        position: 'top',
+      }
+    }
+
+  }
+
+
   return (
     <div className='px-2 md:px-7 py-5'>
       <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-7'>
